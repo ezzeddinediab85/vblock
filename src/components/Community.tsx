@@ -33,7 +33,7 @@ const Community = () => {
               className={`relative aspect-square rounded-xl overflow-hidden group transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <img src={src} alt="V-BLOCK community" className="w-full h-full object-cover" loading="lazy" decoding="async" width="400" height="400" />
+              <img src={`${import.meta.env.BASE_URL}${src.startsWith('/') ? src.slice(1) : src}`} alt="V-BLOCK community" className="w-full h-full object-cover" loading="lazy" decoding="async" width="400" height="400" />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/40 transition-all duration-300 flex items-center justify-center">
                 <span className="text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity font-body text-sm font-semibold">
                   @vblock_tn
